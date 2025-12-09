@@ -90,6 +90,27 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.english-name {
+  font-size: 1.2em;
+  font-weight: 400;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.email {
+  font-size: 1.1em;
+  font-weight: 300;
+  opacity: 0.9;
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
 .subtitle {
   font-size: 1.3em;
   font-weight: 300;
@@ -97,6 +118,7 @@ body {
   position: relative;
   z-index: 1;
   letter-spacing: 1px;
+  margin-top: 10px;
 }
 
 .section {
