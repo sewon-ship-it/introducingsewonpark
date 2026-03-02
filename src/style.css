@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Gowun+Dodum&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +19,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', 'Malgun Gothic', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Gowun Dodum', 'Baloo 2', 'Segoe UI', 'Malgun Gothic', 'Apple SD Gothic Neo', -apple-system, BlinkMacSystemFont, sans-serif;
   background: linear-gradient(135deg, #F0F8FF 0%, #E8F4F8 50%, #E0F0F8 100%);
   color: var(--text-dark);
   line-height: 1.7;
@@ -50,7 +52,9 @@ body {
 }
 
 .header {
-  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--medium-blue) 100%);
+  background: linear-gradient(135deg, #a5b4fc 0%, #60a5fa 40%, #f9a8d4 100%);
+  background-size: 220% 220%;
+  animation: headerGradient 14s ease-in-out infinite;
   color: var(--white);
   padding: 60px 40px;
   text-align: center;
@@ -86,22 +90,49 @@ body {
 .header::before {
   content: '';
   position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  animation: pulse 15s infinite;
+  width: 420px;
+  height: 420px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.25);
+  top: -140px;
+  right: -80px;
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.35);
+  animation: floatBlob 18s ease-in-out infinite;
+  opacity: 0.9;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.3;
+.header::after {
+  content: '';
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.2);
+  bottom: -120px;
+  left: -60px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  animation: floatBlob 22s ease-in-out infinite reverse;
+  opacity: 0.85;
+}
+
+@keyframes headerGradient {
+  0% {
+    background-position: 0% 50%;
   }
   50% {
-    transform: scale(1.1);
-    opacity: 0.5;
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatBlob {
+  0%, 100% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  50% {
+    transform: translateY(18px) translateX(-10px) scale(1.05);
   }
 }
 
@@ -113,6 +144,7 @@ body {
   z-index: 1;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Baloo 2', 'Gowun Dodum', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .english-name {
@@ -149,6 +181,9 @@ body {
 .section {
   padding: 50px 40px;
   border-bottom: 1px solid var(--light-blue);
+  background:
+    radial-gradient(circle at 0 0, rgba(255, 255, 255, 0.9) 0, transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(232, 244, 248, 0.9) 0, transparent 55%);
 }
 
 .section:last-of-type {
@@ -162,6 +197,7 @@ body {
   padding-bottom: 15px;
   border-bottom: 3px solid var(--soft-blue);
   position: relative;
+  font-family: 'Baloo 2', 'Gowun Dodum', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .section-title::after {
@@ -188,6 +224,8 @@ body {
   transition: all 0.3s ease;
   font-size: 1.05em;
   color: var(--text-dark);
+  cursor: pointer;
+  position: relative;
 }
 
 .item:hover {
@@ -224,6 +262,44 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  position: relative;
+}
+
+.content-box:not(.experience-list) .item {
+  background: #FFF7E6;
+  border-left-color: #FBBF24;
+}
+
+.content-box:not(.experience-list) .item::before {
+  content: '🎓';
+  position: absolute;
+  left: -12px;
+  top: 18px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #FDE68A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(251, 191, 36, 0.45);
+  font-size: 1.1rem;
+}
+
+.experience-item::before {
+  content: '📚';
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #DBEAFE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+  font-size: 1.05rem;
 }
 
 .number {
@@ -232,6 +308,7 @@ body {
   font-size: 1.1em;
   min-width: 30px;
   flex-shrink: 0;
+  font-family: 'Baloo 2', 'Gowun Dodum', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 .footer {
@@ -240,6 +317,62 @@ body {
   text-align: center;
   color: var(--text-light);
   font-size: 0.9em;
+}
+
+.item-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.item-modal.is-open {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.item-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(6px);
+}
+
+.item-modal-content {
+  position: relative;
+  max-width: 520px;
+  width: calc(100% - 48px);
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 26px 28px 24px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.3);
+  z-index: 1;
+}
+
+.item-modal-text {
+  font-size: 1.05em;
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+.item-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  border: none;
+  background: transparent;
+  font-size: 1.4em;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.item-modal-close:hover {
+  color: var(--primary-blue);
 }
 
 @media (max-width: 768px) {

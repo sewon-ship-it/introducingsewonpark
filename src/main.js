@@ -8,9 +8,9 @@ const content = {
     subtitle: '초등교사 · AI·디지털 교육 전문가',
     educationTitle: '학력',
     experienceTitle: '이력',
-    footer: '© 2025 박세원',
+    footer: '© 2026 박세원',
     education: [
-      '이화여대 초등교육학과 19학번 수석졸업, 공동대표',
+      '이화여대 초등교육학과 19학번 수석입학, 수석졸업, 공동대표',
       '중앙대학교사범대학부속초등학교 정교사 23년도~',
       '서울대학교 AI융합교육학과 석사과정 재학중, 5기 학과 대표 (2025.9월~)'
     ],
@@ -41,8 +41,9 @@ const content = {
       '2025 AI선도교사단 GOLDENSTORY 공모전 합격. 전시(2025.11.22)(사회정서학습, 게임기반학습, 바이브코딩 관련)',
       '2025 마이크로러닝 직무연수 영상공모 최우수상(20251112 최종 선정)',
       '2025 AI에듀테크 선도교사단 성과공유회 참석_20251103',
-      '한국 사립초 연합회 우수 교직원 해외연수 (예정) 20261111~19',
-      '교수평현장지원단(교육과정 수업 평가 현장지원단) _초등 실과 20260122~23 (예정)'
+      '한국 사립초 연합회 우수 교직원 해외연수 20261111~19',
+      '교수평현장지원단(교육과정 수업 평가 현장지원단) _초등 실과 20260122~23',
+      '2025 KERIS 터치(T.O.U.C.H)교사단 교육혁신사례 <우수사례 및 홍보 콘텐츠 공모전> 최우수상 수상 (2026.02.25)'
     ]
   },
   en: {
@@ -51,7 +52,7 @@ const content = {
     subtitle: 'Elementary School Teacher · AI & Digital Education Expert',
     educationTitle: 'Education',
     experienceTitle: 'Experience',
-    footer: '© 2025 Se-won Park',
+    footer: '© 2026 Se-won Park',
     education: [
       'Graduated Summa Cum Laude from Ewha Womans University, Department of Elementary Education, Class of 2019, Co-Representative',
       'Certified Teacher at Chung-Ang University Elementary School (2023~)',
@@ -84,8 +85,9 @@ const content = {
       '2025 AI Leading Teacher Team GOLDENSTORY Competition Pass. Exhibition (2025.11.22) (Social-Emotional Learning, Game-Based Learning, Vibe Coding related)',
       '2025 Microlearning Job Training Video Competition Grand Prize (20251112 final selection)',
       '2025 AI EdTech Leading Teacher Team Performance Sharing Meeting Attendance_20251103',
-      'Korea Private Elementary School Association Excellent Staff Overseas Training (Scheduled) 20261111~19',
-      'Teaching-Learning Assessment Field Support Team (Curriculum, Teaching, Assessment Field Support Team) _Elementary Practical Arts 20260122~23 (Scheduled)'
+      'Korea Private Elementary School Association Excellent Staff Overseas Training 20261111~19',
+      'Teaching-Learning Assessment Field Support Team (Curriculum, Teaching, Assessment Field Support Team) _Elementary Practical Arts 20260122~23',
+      'Grand Prize in the 2025 KERIS TOUCH Teacher Education Innovation Best Practices & Promotional Content Contest (2026.02.25)'
     ]
   }
 };
@@ -105,6 +107,32 @@ function switchLanguage(lang) {
 function updateHTMLAttributes(lang) {
   document.documentElement.lang = lang;
   document.title = content[lang].title;
+}
+
+// 카드 클릭 시 큰 팝업으로 보기
+function setupItemModalInteractions() {
+  const modal = document.querySelector('#item-modal');
+  const modalText = document.querySelector('.item-modal-text');
+  const backdrop = document.querySelector('.item-modal-backdrop');
+  const closeBtn = document.querySelector('.item-modal-close');
+  const items = document.querySelectorAll('.item');
+
+  if (!modal || !modalText || items.length === 0) return;
+
+  items.forEach(item => {
+    item.addEventListener('click', () => {
+      const rawText = item.textContent.replace(/^\d+\.\s*/, '').trim();
+      modalText.textContent = rawText;
+      modal.classList.add('is-open');
+    });
+  });
+
+  [backdrop, closeBtn].forEach(el => {
+    if (!el) return;
+    el.addEventListener('click', () => {
+      modal.classList.remove('is-open');
+    });
+  });
 }
 
 // 콘텐츠 렌더링 함수
@@ -140,11 +168,22 @@ function renderContent() {
       <footer class="footer">
         <p>${langContent.footer}</p>
       </footer>
+      
+      <div id="item-modal" class="item-modal">
+        <div class="item-modal-backdrop"></div>
+        <div class="item-modal-content">
+          <button class="item-modal-close" aria-label="닫기">&times;</button>
+          <p class="item-modal-text"></p>
+        </div>
+      </div>
     </div>
   `;
   
   // 전역 함수로 등록 (인라인 onclick을 위해)
   window.switchLanguage = switchLanguage;
+
+  // 카드 클릭 이벤트 연결
+  setupItemModalInteractions();
 }
 
 // 초기 렌더링
