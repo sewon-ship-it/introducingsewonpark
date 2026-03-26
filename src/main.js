@@ -21,16 +21,16 @@ const content = {
       '2024 AIEDAP 마스터 교원 승급',
       '2023 AIEDAP 리더교원',
       '2023 AIEDAP 최종보고회 서울지역 리더교원 초등교사 2인 중 1인으로 초청',
-      '동작관악교육지원청 미래교육지구 교원지원단',
-      '동작관악 함성지원단(미래교육영역) 교사',
-      '동작관악 2023. 2024 AI·에듀테크 선도교사단',
+      '2025 동작관악교육지원청 미래교육지구 교원지원단',
+      '2025 동작관악 함성지원단(미래교육영역) 교사',
+      '동작관악 2023, 2024, 2025 AI·에듀테크 선도교사단',
       '금성출판사 주최 <제1회 교육 분야 AI 활용 사례 및 아이디어 공모전> 우수상 수상(2024.09.01)',
       '교육부 터치교사단 3기 (2024.11~)',
       '교육부 터치교사단 서울특별시 초등 대표 2인 중 1인 (2024.11.26.~)',
       '2025 AIEDAP(AI EDucation Alliace & Policy lab) 수도-충청권역 성과공유회 발표 _2025.12.27',
       '교육부 \'디지털 인프라 가이드라인 검토 협의회\' 초청 및 참석(2024.12.12.)',
       '2024 동작관악 초등 AI 디지털 교과서 살펴보기 연수지원단(2025.01.13.~) -> 흑0초 보조강사 출강(2025. 2. 20)',
-      'KERIS 주관 AIDT 수업설계안 우수 사례로 뽑혀 시도교육청 연수자료로 활용될 예정(2025.1 선정~)',
+      'KERIS 주관 AIDT 수업설계안 우수 사례로 뽑혀 시도교육청 연수자료로 활용됨.(2025.1 선정~)',
       '[네페스 컨소시엄] 광0고 선생님들 대상 출강 보조강사(AIDT수학)(2025.1.19)',
       '[네페스 컨소시엄] 태0초 선생님들 대상 출강 보조강사(교실혁명교육의 이해)(2025.1.20)',
       '2025 함성지원단 선발(AI디지털, Math Up, 진로교육, 생태전환교육) (발대식 25.04.16)',
@@ -43,7 +43,8 @@ const content = {
       '2025 AI에듀테크 선도교사단 성과공유회 참석_20251103',
       '한국 사립초 연합회 우수 교직원 해외연수 20261111~19',
       '교수평현장지원단(교육과정 수업 평가 현장지원단) _초등 실과 20260122~23',
-      '2025 KERIS 터치(T.O.U.C.H)교사단 교육혁신사례 <우수사례 및 홍보 콘텐츠 공모전> 최우수상 수상 (2026.02.25)'
+      '2025 KERIS 터치(T.O.U.C.H)교사단 교육혁신사례 <우수사례 및 홍보 콘텐츠 공모전> 최우수상 수상 (2026.02.25)',
+      '2026 재미한인교육연구자협회(KAERA) 학회_ 2026.04,08_주제: Analyzing teachers\' perceptions after AI Digital Textbooks were downgraded to supplemental resources: An activity theory approach'
     ]
   },
   en: {
@@ -65,16 +66,16 @@ const content = {
       '2024 AIEDAP Master Teacher Promotion',
       '2023 AIEDAP Leader Teacher',
       '2023 Invited as one of 2 Seoul Region Leader Teacher Elementary School Teachers to AIEDAP Final Report Meeting',
-      'Dongjak-Gwanak Office of Education Future Education District Teacher Support Team',
-      'Dongjak-Gwanak Hamsung Support Team (Future Education Area) Teacher',
-      'Dongjak-Gwanak 2023, 2024 AI & EdTech Leading Teacher Team',
+      '2025 Dongjak-Gwanak Office of Education Future Education District Teacher Support Team',
+      '2025 Dongjak-Gwanak Hamsung Support Team (Future Education Area) Teacher',
+      'Dongjak-Gwanak 2023, 2024, 2025 AI & EdTech Leading Teacher Team',
       'Won Excellence Award at Geumseong Publishing\'s <1st AI Application Cases and Ideas Competition in Education> (2024.09.01)',
       'Ministry of Education Touch Teacher Team 3rd Cohort (2024.11~)',
       'Ministry of Education Touch Teacher Team Seoul Metropolitan City Elementary Representative (one of 2) (2024.11.26.~)',
       '2025 AIEDAP (AI Education Alliance & Policy lab) Seoul-Chungcheong Region Performance Sharing Meeting Presentation _2025.12.27',
       'Invited and Attended Ministry of Education \'Digital Infrastructure Guideline Review Conference\' (2024.12.12.)',
       '2024 Dongjak-Gwanak Elementary AI Digital Textbook Review Training Support Team (2025.01.13.~) -> Assistant Instructor at Heuk0 Elementary (2025. 2. 20)',
-      'Selected as Excellent Case for KERIS AIDT Lesson Design Plan, to be used as training material for Provincial Offices of Education (2025.1 selection~)',
+      'Selected as Excellent Case for the KERIS AIDT Lesson Design Plan, used as training material for Provincial Offices of Education (2025.1 selection~)',
       '[NEPES Consortium] Assistant Instructor for Gwang0 High School Teachers (AIDT Mathematics) (2025.1.19)',
       '[NEPES Consortium] Assistant Instructor for Tae0 Elementary School Teachers (Understanding Classroom Revolution Education) (2025.1.20)',
       '2025 Hamsung Support Team Selection (AI Digital, Math Up, Career Education, Ecological Transition Education) (Launch Ceremony 25.04.16)',
@@ -87,7 +88,8 @@ const content = {
       '2025 AI EdTech Leading Teacher Team Performance Sharing Meeting Attendance_20251103',
       'Korea Private Elementary School Association Excellent Staff Overseas Training 20261111~19',
       'Teaching-Learning Assessment Field Support Team (Curriculum, Teaching, Assessment Field Support Team) _Elementary Practical Arts 20260122~23',
-      'Grand Prize in the 2025 KERIS TOUCH Teacher Education Innovation Best Practices & Promotional Content Contest (2026.02.25)'
+      'Grand Prize in the 2025 KERIS TOUCH Teacher Education Innovation Best Practices & Promotional Content Contest (2026.02.25)',
+      '2026 KAERA (Korean American Educational Researchers Association) Conference_ 2026.04,08_Topic: Analyzing teachers\' perceptions after AI Digital Textbooks were downgraded to supplemental resources: An activity theory approach'
     ]
   }
 };
